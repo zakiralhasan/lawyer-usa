@@ -1,0 +1,297 @@
+    /* ===============================
+                 COMMON CSS 
+    =================================*/
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        font-size: 62.5%;
+    }
+
+    body {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    /* ===============================
+                 HEADER 
+    =================================*/
+    .container {
+        max-width: 144rem;
+        margin: 0 auto;
+        width: 100%;
+        padding: 0 .2rem;
+    }
+
+    .nav-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: white;
+        background-color: rgb(134, 133, 133);
+        padding: .5rem 3rem;
+    }
+
+    .nav-inner>ul {
+        display: flex;
+    }
+
+    .nav-inner>ul>li {
+        margin: 1rem;
+        list-style: none;
+    }
+
+    .nav-inner>ul>li>a {
+        text-decoration: none;
+        color: white;
+    }
+
+    #img-slider-section {
+        border: .5rem solid rgb(67, 67, 238);
+        border-radius: .6rem;
+        margin-top: 1rem;
+    }
+
+    #img-slider-section>img {
+        width: 100%;
+        height: 60vh;
+        margin-bottom: -3px;
+    }
+
+    .img-slider-section {
+        position: relative;
+    }
+
+    #left-arrow {
+        position: absolute;
+        width: 3rem;
+        top: 40%;
+        left: 1rem;
+        background-color: white;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    #right-arrow {
+        position: absolute;
+        width: 3rem;
+        top: 40%;
+        right: 1rem;
+        background-color: white;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    /* ===============================
+                 ADDS BANNER 
+    =================================*/
+    .add-banner {
+        background-color: rgb(178, 178, 181);
+        width: 100%;
+        padding: .3rem;
+        height: 5rem;
+        margin: 1rem 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+    }
+
+    /* ===============================
+                RECENT POST 
+    =================================*/
+    .recent-post {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .recent-post_left-section {
+        border: .1rem solid rgb(22, 22, 22);
+        flex-basis: 80%;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 1rem;
+        padding: .3rem;
+    }
+
+    .recent-post-card {
+        max-width: 36rem;
+    }
+
+    .recent-post-card>img {
+        width: 100%;
+    }
+
+    .recent-post-card>a {
+        font-weight: bold;
+        color: black;
+        text-decoration: none;
+    }
+
+    .recent-post-card>a:hover {
+        text-decoration: underline;
+    }
+
+    .recent-post_right-section {
+        border: .1rem solid rgb(22, 22, 22);
+        flex-basis: 20%;
+    }
+
+    .side-add-section {
+        height: 18rem;
+        margin-top: 2rem;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(178, 178, 181);
+    }
+
+    /* ===============================
+                ALL POST SECTION 
+    =================================*/
+    .all-post {
+        /* margin: 2rem 0; */
+        border: .1rem solid rgb(22, 22, 22);
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: .6rem;
+        margin-bottom: 2rem;
+        padding: .3rem;
+    }
+
+    /* ===============================
+                CONTACT SECTION 
+    =================================*/
+    .contact-inner {
+        max-width: 36rem;
+        margin: 0 auto;
+        margin-bottom: 1rem;
+        background-color: rgb(192, 190, 190);
+        padding: 1rem;
+        border-radius: .5rem;
+    }
+
+    .contact-inner>h2 {
+        margin-bottom: .6rem;
+        color: red;
+        text-align: center;
+    }
+
+    .contact-inner>form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-inner>form>input {
+        padding: .5rem;
+        margin-bottom: 1rem;
+    }
+
+    .contact-inner>form>input[type=submit] {
+        cursor: pointer;
+    }
+
+    .contact-inner>form>textarea {
+        padding: .5rem;
+        margin-bottom: 1rem;
+    }
+
+    /* ===============================
+                FOOTER SECTION 
+    =================================*/
+    .footer-inner {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 2rem 0;
+        background-color: rgb(35, 35, 35);
+        color: white;
+    }
+
+    .footer-social-icons>a {
+        text-decoration: none;
+    }
+
+    .footer-social-icons>a>img {
+        width: 2rem;
+        margin-left: 1rem;
+    }
+
+    /* ===============================
+                RESPONSIVE DESIGN
+    =================================*/
+
+    /* Tablete screen  */
+    @media screen and (max-width: 48rem) {
+        #img-slider-section>img {
+            width: 100%;
+            height: 30vh;
+            margin-bottom: -3px;
+        }
+
+        .recent-post {
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .recent-post_left-section {
+            grid-template-columns: auto auto;
+        }
+
+        .recent-post-card {
+            max-width: 100%;
+        }
+
+        .iframe>iframe {
+            width: 100%;
+        }
+
+        .all-post {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .contact-inner {
+            max-width: 100%;
+        }
+    }
+
+    /* Mobile screen  */
+    @media screen and (max-width: 30rem) {
+        #img-slider-section>img {
+            width: 100%;
+            height: 20vh;
+            margin-bottom: -3px;
+        }
+
+        .recent-post {
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .recent-post_left-section {
+            grid-template-columns: auto;
+        }
+
+        .recent-post-card {
+            max-width: 100%;
+        }
+
+        .iframe>iframe {
+            width: 100%;
+        }
+
+        .all-post {
+            grid-template-columns: 1fr;
+        }
+
+        .contact-inner {
+            max-width: 100%;
+        }
+    }
